@@ -1,0 +1,240 @@
+@font-face {
+  font-family: GalaxieCopernicus-Book;
+  src: url(../fonts/GalaxieCopernicus-Book.woff);
+}
+@font-face {
+  font-family: Inter-Variable;
+  src: url(../fonts/Inter-variable.woff);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: GalaxieCopernicus-Book;
+}
+
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+body {
+  background-color: #f2efee;
+  font-family: Inter-Variable;
+  font-weight: 400;
+  font-size: 14px;
+  color: #3c3c3c;
+}
+
+.top-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.top-header ul {
+  list-style: none;
+  float: right;
+}
+.top-header ul li {
+  display: inline-block;
+  margin-left: 32px;
+}
+
+.bg-white-wrapper {
+  margin: 0 0 340px 60px;
+  height: 768px;
+}
+
+header .header-content-wrapper {
+  padding: 80px 60px;
+  transition: 0.2s all ease;
+}
+header .header-content-wrapper nav ul {
+  list-style: none;
+}
+header .header-content-wrapper nav ul li.nav-item {
+  margin-left: 60px;
+  display: inline-block;
+  position: relative;
+}
+header .header-content-wrapper nav ul li.nav-item span {
+  cursor: pointer;
+}
+header .header-content-wrapper nav ul li.has-child ul {
+  font-family: "GalaxieCopernicus-Book";
+  position: absolute;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 99;
+  transition: 0.2s all ease;
+  padding-top: 30px;
+}
+header .header-content-wrapper nav ul li.has-child ul a {
+  font-size: 32px;
+  color: #003a92;
+  padding: 30px 0;
+  display: block;
+}
+header .header-content-wrapper nav ul li.has-child ul li:not(:last-child) {
+  position: relative;
+}
+header .header-content-wrapper nav ul li.has-child ul li:not(:last-child):after {
+  content: "";
+  background: #c4c4c4;
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 1px;
+}
+header .header-content-wrapper nav ul li.has-child:hover ul {
+  height: auto;
+  opacity: 1;
+  width: 400px;
+}
+
+header.header-expanded {
+  height: 400px;
+  max-height: 500px;
+  background: #fff;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+}
+header.sticky .header-content-wrapper {
+  padding: 30px 60px;
+}
+
+header.sticky.header-expanded .header-content-wrapper {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.banner .banner-text-wrapper {
+  padding: 0 60px 80px;
+}
+.banner .banner-text-wrapper .banner-text h1 {
+  color: #003a92;
+  font-size: 64px;
+  line-height: 70.4px;
+}
+.banner .banner-text-wrapper .read-more {
+  position: absolute;
+  bottom: 10px;
+}
+.banner .banner-text-wrapper .read-more a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  width: 214px;
+  display: flex;
+  align-items: center;
+}
+.banner .banner-text-wrapper .read-more a span.btn-text {
+  width: 65%;
+  text-align: center;
+  position: relative;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-text-wrapper .read-more a span.btn-text:after {
+  content: "";
+  background: #c4c4c4;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  right: 0;
+}
+.banner .banner-text-wrapper .read-more a span.btn-img {
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  display: flex;
+}
+.banner .banner-image {
+  position: relative;
+}
+.banner .banner-image img {
+  height: 565px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: calc(100% - 60px);
+}
+
+.article {
+  background-color: #8C2531;
+  height: 700px;
+  padding: 80px 0;
+  margin-bottom: 342px;
+  margin-right: 60px;
+}
+.article .article-text-container {
+  margin-left: 60px;
+  padding-left: 60px;
+  width: 70%;
+}
+.article .article-text-container .sub-title h5 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 32px;
+  font-family: Inter-Variable;
+}
+.article .article-text-container .sub-heading h2 {
+  font-size: 44px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.article .article-text-container .text {
+  font-size: 18px;
+  color: #fff;
+  font-family: GalaxieCopernicus-Book;
+  margin-bottom: 80px;
+}
+.article .article-image {
+  position: relative;
+}
+.article .article-image img {
+  height: 565px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: calc(100% - 60px);
+}
+
+.article-slider {
+  background: #fff;
+  padding: 80px 60px;
+}
+.article-slider h5 {
+  font-size: 24px;
+  color: #003a92;
+  font-family: Inter-Variable;
+}
+
+/*# sourceMappingURL=style.css.map */
