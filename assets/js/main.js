@@ -1,20 +1,24 @@
+//Sticky Header
 jQuery(window).scroll(function () {
   var sticky = jQuery("header .header-content-wrapper"),
     scroll = jQuery(window).scrollTop();
 
   if (scroll >= 250) {
     sticky.addClass("sticky");
+    jQuery('body').addClass("scrolled");
   } else {
     sticky.removeClass("sticky");
+    jQuery('body').removeClass("scrolled");
   }
 });
 
+//Overlay on Menu expansion
 jQuery("li.has-child").hover(
   function () {
-    jQuery("body").addClass("overlay-expanded");
+    jQuery(".scrolled .overlay").addClass("overlay-expanded");
   },
   function () {
-    jQuery("body").removeClass("header-expanded");
+    jQuery(".scrolled .overlay").removeClass("overlay-expanded");
   }
 );
 
@@ -53,6 +57,7 @@ jQuery(document).ready(function ($) {
         },
       ],
     });
+    
   }
 
   // Gallery Slider
@@ -144,8 +149,91 @@ jQuery(document).ready(function ($) {
     });
   }
 });
+
+//Hamburger Menu
 jQuery(".mobile-menu .burger").click(function () {
   jQuery(".primary-menu").toggleClass("active");
   jQuery(".mobile-menu .burger").toggleClass("expanded");
   jQuery("body").toggleClass("menu-expanded");
 });
+
+//Gsap Animations
+gsap.registerPlugin(ScrollTrigger);
+gsap.from('.main-heading', {
+  opacity: 0,
+   x:-30,
+  ease: 'none',
+  duration:1,
+  scrollTrigger: {
+    trigger: '.main-heading'
+  }
+});
+
+gsap.from('.banner-image img', {
+  opacity: 0,
+  x:50,
+  ease: 'none',
+  duration:1,
+  scrollTrigger: {
+    trigger: '.banner-image'
+  }
+});
+gsap.from(".blogs h5",{
+  scrollTrigger: {
+    trigger: ".blogs"
+  },
+  x:-50,
+ opacity:0,
+ duration:2
+});
+gsap.from(".blog-image-wrapper", {
+  scrollTrigger: {
+    trigger: ".blog-item-wrapper"
+  },
+opacity:0,
+ duration:2
+});
+gsap.from(".article .article-text-container", {
+  scrollTrigger: {
+    trigger: ".article"
+  },
+  x:-50,
+ opacity:0,
+ duration:2
+});
+gsap.from(".article .article-image img",{
+  scrollTrigger: {
+    trigger: ".article .article-text-container"
+  },
+  x:50,
+ opacity:0,
+ duration:2
+});
+
+gsap.from(".article-slider h5", {
+  scrollTrigger: {
+    trigger: ".article-slider"
+  },
+  x:-50,
+ opacity:0,
+ duration:2
+});
+gsap.from(".article-slider .slider-img img", {
+  scrollTrigger: {
+    trigger: ".article-slider"
+  },
+opacity:0,
+ duration:2
+});
+
+gsap.to(".section-beige", {
+  scrollTrigger: {
+    trigger: ".section-beige"
+  },
+opacity:0,
+ duration:2
+});
+
+
+
+

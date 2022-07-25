@@ -22,6 +22,10 @@ html,
 body {
   overflow-x: hidden;
 }
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+}
 a {
   color: $text-color;
   text-decoration: none;
@@ -40,6 +44,7 @@ body {
   font-size: 14px;
   color: $text-color;
 }
+
 .bg-grey {
   background-color: $background-color;
 }
@@ -125,7 +130,7 @@ header {
           margin-left: 60px;
           display: inline-block;
           position: relative;
-          padding-bottom: 30px;
+
           @media screen and (min-device-width: 1100px) and (max-device-width: 1300px) {
             margin-left: 40px;
           }
@@ -148,7 +153,7 @@ header {
             opacity: 0;
             z-index: 99;
             transition: 0.2s all ease;
-            margin-top: 31px;
+            margin-top: 0;
             z-index: -1;
             a {
               font-size: 32px;
@@ -207,6 +212,9 @@ header .header-content-wrapper.sticky {
             padding: 0;
           }
         }
+        ul {
+          margin-top: 31px;
+        }
       }
 
       &:before,
@@ -225,6 +233,9 @@ header .header-content-wrapper.sticky {
       &:after {
         right: 0;
         transform: translateX(100%);
+      }
+      li.nav-item {
+        padding-bottom: 30px;
       }
     }
   }
@@ -252,12 +263,11 @@ header .sticky.header-expanded {
     .read-more {
       position: absolute;
       bottom: 10px;
-      @media screen and (min-device-width:768px)
-        and (max-device-width: 978px) {
-          position: relative;
-          bottom: unset;
-          margin: 30px 0 0;
-        }
+      @media screen and (min-device-width: 768px) and (max-device-width: 978px) {
+        position: relative;
+        bottom: unset;
+        margin: 30px 0 0;
+      }
       a {
         @include button-primary;
 
@@ -390,7 +400,7 @@ header .sticky.header-expanded {
   .image-wrapper {
     padding: 0 60px;
     margin-top: -250px;
-    img.slider-img{
+    img.slider-img {
       width: 100%;
       height: 500px;
       object-fit: cover;
@@ -412,10 +422,11 @@ header .sticky.header-expanded {
     li {
       padding: 20px 0;
       position: relative;
-      h2 {
+      span {
         color: #fff;
         font-weight: 400;
         font-size: 44px;
+        font-family: GalaxieCopernicus-Book;
       }
     }
     li:not(:last-child) {
@@ -427,6 +438,7 @@ header .sticky.header-expanded {
         height: 1px;
         width: 100%;
         bottom: 0;
+        left: 0;
       }
     }
   }
@@ -549,6 +561,7 @@ header .sticky.header-expanded {
   h5 {
     position: absolute;
     top: 40px;
+    z-index: 9;
   }
   .gallery-item {
     .gallery-image {
@@ -588,10 +601,9 @@ footer {
         display: inline-block;
         margin-right: 60px;
         padding: 20px 0;
-        @media screen and (min-device-width: 768px)
-          and (max-device-width: 1050px) {
-            margin-right: 30px;
-          }
+        @media screen and (min-device-width: 768px) and (max-device-width: 1050px) {
+          margin-right: 30px;
+        }
         a {
           color: #fff;
           font-weight: 400;
@@ -609,8 +621,7 @@ footer {
         display: inline-block;
         margin-left: 30px;
         padding: 20px 0;
-        @media screen and (min-device-width: 768px)
-        and (max-device-width: 1050px) {
+        @media screen and (min-device-width: 768px) and (max-device-width: 1050px) {
           margin-left: 15px;
         }
         img {
@@ -684,6 +695,26 @@ footer {
     background: #fff;
   }
 }
+.scrolled {
+  .main-header {
+    z-index: 9999;
+    position: relative;
+  }
+}
+.overlay.overlay-expanded {
+  position: relative;
+  transition: 0.2s all ease;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: #000000a6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+}
 @media screen and (max-width: 1100px) {
   .mobile-menu {
     position: absolute;
@@ -724,7 +755,6 @@ footer {
               &:hover {
                 background: none;
                 width: 100%;
-                
               }
             }
           }
@@ -733,12 +763,12 @@ footer {
     }
     .header-content-wrapper.sticky {
       padding: 30px 16px;
-      nav{
-        ul{
+      nav {
+        ul {
           &:before,
-                &:after {
-                  content: none;
-                }
+          &:after {
+            content: none;
+          }
         }
       }
     }
@@ -874,16 +904,14 @@ footer {
     padding: 0 16px;
   }
 
-footer{
-  .copyright-section {
-    p.copy-right {
-      margin-top: 32px;
-      text-align: left;
+  footer {
+    .copyright-section {
+      p.copy-right {
+        margin-top: 32px;
+        text-align: left;
+      }
     }
-   
   }
-  
-}
 }
 @media screen and (max-width: 768px) {
   header {
@@ -1004,7 +1032,7 @@ footer{
     .copyright-section {
       font-size: 12px;
       margin-top: 60px;
-     
+
       .footer-nav-secondary {
         li {
           margin-right: 20px;
@@ -1032,7 +1060,7 @@ footer{
     .image-wrapper {
       margin-top: -40px;
       padding: 0 32px;
-      img.slider-img{
+      img.slider-img {
         height: 175px;
       }
       .image-caption.hidden-desktop {
@@ -1043,11 +1071,10 @@ footer{
         position: absolute;
         bottom: 20px;
         left: 30px;
-        &:after{
+        &:after {
           content: url(../images/right-arrow.png);
           position: absolute;
           margin-left: 15px;
-
         }
       }
     }
@@ -1060,17 +1087,14 @@ footer{
       display: none;
     }
   }
-  
 }
-@media screen and (min-device-width: 768px)
-and (max-device-width: 978px) {
+@media screen and (min-device-width: 768px) and (max-device-width: 978px) {
   .article-slider {
     padding: 150px 0px 50px 32px;
+  }
 }
-}
-@media screen and (min-device-width: 300px)
-and (max-device-width: 350px) {
+@media screen and (min-device-width: 300px) and (max-device-width: 350px) {
   .article-slider {
     padding: 50px 0px 50px 32px;
-}
+  }
 }

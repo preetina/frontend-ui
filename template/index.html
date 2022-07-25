@@ -1,46 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Company XYZ</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-    <link href="../assets/css/slick.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script defer type="text/javaScript" src="../assets/js/slick.min.js"></script>
-  </head>
-  <body>
-    <div class="bg-grey">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company XYZ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link href="../assets/css/slick.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/jquery-3.6.0.js"></script>
+  <script defer type="text/javaScript" src="../assets/js/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="bg-grey">
     <section class="top-header">
       <div class="top-header-wrapper">
         <div class="row">
           <div class="col-lg-12 col-md-12">
             <ul class="social-media-links">
               <li>
-                <a href="" target="_blank"
-                  ><img
-                    src="../assets/images/social-icons/twitter.png"
-                    alt="twitter"
-                /></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><img
+                    src="../assets/images/social-icons/twitter.png" alt="twitter" /></a>
               </li>
               <li>
-                <a href="" target="_blank"
-                  ><img
-                    src="../assets/images/social-icons/linkedin.png"
-                    alt="twitter"
-                /></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img
+                    src="../assets/images/social-icons/linkedin.png" alt="linkedin" /></a>
               </li>
             </ul>
           </div>
@@ -52,32 +43,34 @@
         <div class="mobile-menu">
           <div class="burger">
             <div class="strip burger-strip-2">
-                <div></div>
-                <div></div>
-                <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-4 col-6">
             <div class="site-logo">
               <a href="index.html">
-                <img src="../assets/images/union.png" alt="site-logo">
+                <img src="../assets/images/union.png" alt="Company logo" />
               </a>
             </div>
           </div>
           <div class="col-lg-8 col-md-8 col-6">
-           
             <nav class="primary-menu">
-              
               <div class="collapsible-navbar">
                 <ul class="navbar-list">
                   <li class="nav-item has-child">
                     <span class="nav-item-link">Founders</span>
-                      <ul class="sub-menu">
-                        <li class="sub-menu-item"><a href="#">Maria Kenter</a></li>
-                        <li class="sub-menu-item"><a href="#">Roger Septimus</a></li>
-                      </ul>
+                    <ul class="sub-menu">
+                      <li class="sub-menu-item">
+                        <a href="#">Maria Kenter</a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="#">Roger Septimus</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="nav-item">
                     <a class="nav-item-link" href="#">Beneficiaries</a>
@@ -85,8 +78,12 @@
                   <li class="nav-item has-child">
                     <span class="nav-item-link">Scholarships</span>
                     <ul class="sub-menu">
-                      <li class="sub-menu-item"><a href="#">Sed ut tincidunt euismod malesuada</a></li>
-                      <li class="sub-menu-item"><a href="#">Nunc, sit in varius pulvinar</a></li>
+                      <li class="sub-menu-item">
+                        <a href="#">Sed ut tincidunt euismod malesuada</a>
+                      </li>
+                      <li class="sub-menu-item">
+                        <a href="#">Nunc, sit in varius pulvinar</a>
+                      </li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -104,10 +101,8 @@
           </div>
         </div>
       </div>
-      
     </header>
     <section class="bg-white bg-white-wrapper">
-     
       <div class="banner">
         <div class="banner-text-wrapper">
           <div class="row">
@@ -121,30 +116,24 @@
             </div>
             <div class="col-lg-3 col-md-12 col-12">
               <div class="read-more">
-                <a href="#" class="button read-more-btn"
-                  ><span class="btn-text">Read More</span
-                  ><span class="btn-img"
-                    ><img
-                      src="../assets/images/right.png"
-                      alt="read-more" /></span
-                ></a>
+                <a href="#" class="button read-more-btn"><span class="btn-text">Read More</span><span
+                    class="btn-img"><img src="../assets/images/right.png" alt="" /></span></a>
               </div>
             </div>
           </div>
         </div>
         <div class="banner-image">
-          <img src="../assets/images/banner/banner.jpg" alt="banner" />
+          <img src="../assets/images/banner/banner.jpg" alt="Tall buildings with sky in background" />
         </div>
       </div>
     </section>
     <section class="blogs hide-mobile">
-        <div class="blog-item-wrapper">
+      <div class="blog-item-wrapper">
         <div class="blog-left align-vertical">
-          <h5 class="heading-blue"> Latest News
-          </h5>
+          <h5 class="heading-blue">Latest News</h5>
           <div class="blog-item item-1 border-right-0">
             <div class="blog-image-wrapper">
-              <img src="../assets/images/news/image-3.jpg" alt="blog-image">
+              <img src="../assets/images/news/image-3.jpg" alt="Large white building with dome structure on top" />
               <div class="published-date">
                 <span class="day">November 19</span>
                 <span class="year">2020</span>
@@ -157,87 +146,93 @@
             </div>
           </div>
           <div class="button-secondary">
-            <a href="#" class="see-more">See all news<img src="../assets/images/right.png" alt="see-more"></a>
+            <a href="#" class="see-more">See all news<img src="../assets/images/right.png" /></a>
           </div>
         </div>
-       <div class="blog-right">
-        <div class="blog-item item-2 border-bottom-0">
-          <div class="blog-image-wrapper">
-            <img src="../assets/images/news/image-2.jpg" alt="blog-image">
-            <div class="published-date">
-              <span class="day">November 19</span>
-              <span class="year">2020</span>
-            </div>
-          </div>
-          <div class="blog-title">
-            <h2>
-              Molestie molesti metus, tempus in commodo, semper tellus
-            </h2>
-          </div>
-        </div>
-        <div class="blog-item-wrapper">
-          <div class="blog-left">
-            <div class="blog-item item-3 border-right-0">
-              <div class="blog-image-wrapper">
-                <img src="../assets/images/news/image.jpg" alt="blog-image">
-                <div class="published-date">
-                  <span class="day">November 19</span>
-                  <span class="year">2020</span>
-                </div>
-              </div>
-              <div class="blog-title">
-                <h2>
-                  In faucibus suspendisse magna massa nibh elementum augue phasellus tristique senectus urna
-                </h2>
+        <div class="blog-right">
+          <div class="blog-item item-2 border-bottom-0">
+            <div class="blog-image-wrapper">
+              <img src="../assets/images/news/image-2.jpg" alt="View from bottom of a glass building" />
+              <div class="published-date">
+                <span class="day">November 19</span>
+                <span class="year">2020</span>
               </div>
             </div>
+            <div class="blog-title">
+              <h2>
+                Molestie molesti metus, tempus in commodo, semper tellus
+              </h2>
+            </div>
           </div>
-          <div class="blog-right">
-            <div class="blog-item item-4">
-              <div class="blog-image-wrapper">
-                <img src="../assets/images/news/image-4.jpg" alt="blog-image">
-                <div class="published-date">
-                  <span class="day">November 19</span>
-                  <span class="year">2020</span>
+          <div class="blog-item-wrapper">
+            <div class="blog-left">
+              <div class="blog-item item-3 border-right-0">
+                <div class="blog-image-wrapper">
+                  <img src="../assets/images/news/image.jpg" alt="Blue and white abstract picture" />
+                  <div class="published-date">
+                    <span class="day">November 19</span>
+                    <span class="year">2020</span>
+                  </div>
+                </div>
+                <div class="blog-title">
+                  <h2>
+                    In faucibus suspendisse magna massa nibh elementum augue
+                    phasellus tristique senectus urna
+                  </h2>
                 </div>
               </div>
-              <div class="blog-title">
-                <h2>
-                  Feugiat mollis quam sollicitudin egestas adipiscing amet
-                </h2>
+            </div>
+            <div class="blog-right">
+              <div class="blog-item item-4">
+                <div class="blog-image-wrapper">
+                  <img src="../assets/images/news/image-4.jpg" alt="Vetical architecture" />
+                  <div class="published-date">
+                    <span class="day">November 19</span>
+                    <span class="year">2020</span>
+                  </div>
+                </div>
+                <div class="blog-title">
+                  <h2>
+                    Feugiat mollis quam sollicitudin egestas adipiscing amet
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-       </div>
-        
-          
-          
-     
     </section>
     <section class="blog hide-desktop">
-      <h5 class="heading-blue"> Latest News
-      </h5>
+      <h5 class="heading-blue">Latest News</h5>
       <div class="blog-item-wrapper">
         <div class="blog-item item-1">
           <div class="blog-image-wrapper">
-            <img src="../assets/images/news/image-3.jpg" alt="blog-image">
+            <img src="../assets/images/news/image-3.jpg" alt="Large white building with dome structure on top" />
             <div class="published-date">
               <span class="day">November 19</span>
               <span class="year">2020</span>
             </div>
           </div>
           <div class="blog-title">
-            <h2>
-              Molestie molesti metus, tempus in commodo, semper tellus
-            </h2>
+            <h2>Molestie molesti metus, tempus in commodo, semper tellus</h2>
           </div>
         </div>
         <div class="blog-item item-2">
           <div class="blog-image-wrapper">
-            <img src="../assets/images/news/image-2.jpg" alt="blog-image">
+            <img src="../assets/images/news/image-2.jpg" alt="View from bottom of a glass building" />
+            <div class="published-date">
+              <span class="day">November 19</span>
+              <span class="year">2020</span>
+            </div>
+          </div>
+          <div class="blog-title">
+            <h2>Molestie molesti metus, tempus in commodo, semper tellus</h2>
+          </div>
+        </div>
+
+        <div class="blog-item item-3">
+          <div class="blog-image-wrapper">
+            <img src="../assets/images/news/image.jpg" alt="Blue and white abstract picture" />
             <div class="published-date">
               <span class="day">November 19</span>
               <span class="year">2020</span>
@@ -245,52 +240,30 @@
           </div>
           <div class="blog-title">
             <h2>
-              Molestie molesti metus, tempus in commodo, semper tellus
+              In faucibus suspendisse magna massa nibh elementum augue
+              phasellus tristique senectus urna
             </h2>
           </div>
         </div>
-        
-         
-            <div class="blog-item item-3">
-              <div class="blog-image-wrapper">
-                <img src="../assets/images/news/image.jpg" alt="blog-image">
-                <div class="published-date">
-                  <span class="day">November 19</span>
-                  <span class="year">2020</span>
-                </div>
-              </div>
-              <div class="blog-title">
-                <h2>
-                  In faucibus suspendisse magna massa nibh elementum augue phasellus tristique senectus urna
-                </h2>
-              </div>
-            </div>
-        
-          
-            <div class="blog-item item-4">
-              <div class="blog-image-wrapper">
-                <img src="../assets/images/news/image-4.jpg" alt="blog-image">
-                <div class="published-date">
-                  <span class="day">November 19</span>
-                  <span class="year">2020</span>
-                </div>
-              </div>
-              <div class="blog-title">
-                <h2>
-                  Feugiat mollis quam sollicitudin egestas adipiscing amet
-                </h2>
-              </div>
-            </div>
-        
-     </div>
-      
-     <div class="button-secondary">
-      <a href="#" class="see-more">See all news<img src="../assets/images/right.png" alt="see-more"></a>
-    </div>
 
-        
-   
-  </section>
+        <div class="blog-item item-4">
+          <div class="blog-image-wrapper">
+            <img src="../assets/images/news/image-4.jpg" alt="Vetical architecture" />
+            <div class="published-date">
+              <span class="day">November 19</span>
+              <span class="year">2020</span>
+            </div>
+          </div>
+          <div class="blog-title">
+            <h2>Feugiat mollis quam sollicitudin egestas adipiscing amet</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-secondary">
+        <a href="#" class="see-more">See all news<img src="../assets/images/right.png" alt="" /></a>
+      </div>
+    </section>
     <section class="article">
       <div class="article-text-container">
         <div class="sub-title">
@@ -303,76 +276,66 @@
         </div>
         <div class="text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation.
         </div>
       </div>
 
       <div class="article-image">
-        <img src="../assets//images/mission.jpg" alt="article-image" />
+        <img src="../assets/images/mission.jpg" alt="Red and grey coloured building" />
       </div>
     </section>
+
     <section class="article-slider">
       <h5 class="heading-blue">Beneficiaries</h5>
       <div class="slider-wrapper">
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image.jpg"
+              alt="A cathedral with dome shaped roof and view of city" />
           </div>
           <div class="slider-text">
-            <p>
-              Morbi magna turpis dolor adipiscing
-            </p>
+            <p>Morbi magna turpis dolor adipiscing</p>
           </div>
         </div>
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image-1.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image-1.jpg" alt="A white mosque with blue sky in background" />
           </div>
           <div class="slider-text">
-            <p>
-              Curabitur cursus bibendum mauris placerat
-            </p>
+            <p>Curabitur cursus bibendum mauris placerat</p>
           </div>
         </div>
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image-2.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image-2.jpg" alt="M shaped building" />
           </div>
           <div class="slider-text">
-            <p>
-              Sagittis quam nunc platea est
-            </p>
+            <p>Sagittis quam nunc platea est</p>
           </div>
         </div>
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image-3.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image-3.jpg" alt="Skyscraper with sky in background" />
           </div>
           <div class="slider-text">
-            <p>
-              Morbi magna turpis dolor adipiscing
-            </p>
+            <p>Morbi magna turpis dolor adipiscing</p>
           </div>
         </div>
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image-1.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image-1.jpg" alt="A mosque with blue sky in background" />
           </div>
           <div class="slider-text">
-            <p>
-              Nisi, sed dui, ac enim
-            </p>
+            <p>Nisi, sed dui, ac enim</p>
           </div>
         </div>
         <div class="article-slider-item">
           <div class="slider-img">
-            <img src="../assets/images/beneficiaries/Image-2.jpg" alt="article-slider-item">
+            <img src="../assets/images/beneficiaries/Image-2.jpg" alt="M shaped building" />
           </div>
           <div class="slider-text">
-            <p>
-              Vitae sodales sit id ullamcorper
-            </p>
+            <p>Vitae sodales sit id ullamcorper</p>
           </div>
         </div>
       </div>
@@ -381,149 +344,124 @@
       <div class="section-beige-wrapper">
         <h5 class="heading-white">The Founders</h5>
       </div>
-      
+
       <div class="image-wrapper">
         <div class="image-slider">
           <div class="item">
-            <img src="../assets/images/founder/founders.jpg" alt="founders-img" class="slider-img">
-            <h2 class="image-caption hidden-desktop">Maria Kenter</h2>
+            <img src="../assets/images/founder/founders.jpg" alt="Founder Maria Kenter" class="slider-img" />
+            <span class="image-caption hidden-desktop">Maria Kenter</span>
           </div>
           <div class="item">
-            <img src="../assets/images/founder/founder2.jpg" alt="founders-img" class="slider-img">
-            <h2 class="image-caption hidden-desktop">Roger Septimus</h2>
+            <img src="../assets/images/founder/founder2.jpg" alt="Founder Roger Septimus" class="slider-img" />
+            <span class="image-caption hidden-desktop">Roger Septimus</span>
           </div>
         </div>
-       
-    </div>
-    <ul class="slider-nav">
-      <li>
-        <h2>Maria Kenter</h2>
-      </li>
-      <li>
-        <h2>Roger Septimus</h2>
-      </li>
-    </ul>
-        <!-- <div class="title-list">
-          <li>
-            <h2>Maria Kenter</h2>
-          </li>
-          <li>
-            <h2>Roger Septimus</h2>
-          </li>
-        </ul>
-      </div> -->
+      </div>
+      <ul class="slider-nav">
+        <li>
+          <span>Maria Kenter</span>
+        </li>
+        <li>
+          <span>Roger Septimus</span>
+        </li>
+      </ul>
 
     </section>
   </div>
-    <section class="gallery">
-      <h5 class="heading-blue">Gallery</h5>
-      <div class="gallery-wrapper">
-       
-          
-        
-        <div class="gallery-item">
-          <div class="gallery-image border-right-0">
-            <img src="../assets/images/gallery/gallery-img-1.jpg" alt="">
-            <div class="img-caption">
-              <p>Caption lorem ipsum dolor sit amet</p>
-            </div>
+  <section class="gallery">
+    <h5 class="heading-blue">Gallery</h5>
+    <div class="gallery-wrapper">
+      <div class="gallery-item">
+        <div class="gallery-image border-right-0">
+          <img src="../assets/images/gallery/gallery-img-1.jpg" alt="" />
+          <div class="img-caption">
+            <p>Caption lorem ipsum dolor sit amet</p>
           </div>
-         
         </div>
-        <div class="gallery-item">
-          <div class="gallery-image">
-            <img src="../assets/images/gallery/gallery-img-2.jpg" alt="">
-            <div class="img-caption">
-              <p>Caption lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-         
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-image border-left-0">
-            <img src="../assets/images/gallery/gallery-img-3.jpg" alt="">
-            <div class="img-caption">
-              <p>Caption lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-          
-        </div>
-    
       </div>
-    </section>
-    <footer>
-      <div class="footer-logo">
-        <a href="index.html">
-          <img src="../assets/images/union.png" alt="site-logo">
-        </a>
+      <div class="gallery-item">
+        <div class="gallery-image">
+          <img src="../assets/images/gallery/gallery-img-2.jpg" alt="" />
+          <div class="img-caption">
+            <p>Caption lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
       </div>
-      <div class="footer-nav-primary">
-        <div class="row">
-          <div class="col-lg-10 col-md-9 col-sm-12">
-            <ul class="footer-menu">
+      <div class="gallery-item">
+        <div class="gallery-image border-left-0">
+          <img src="../assets/images/gallery/gallery-img-3.jpg" alt="" />
+          <div class="img-caption">
+            <p>Caption lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="../assets/images/union.png" alt="Company logo" />
+      </a>
+    </div>
+    <div class="footer-nav-primary">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 col-sm-12">
+          <ul class="footer-menu">
+            <li>
+              <a href="#">Founders</a>
+            </li>
+            <li>
+              <a href="#">Beneficiaries</a>
+            </li>
+            <li>
+              <a href="#">Scholarships</a>
+            </li>
+            <li>
+              <a href="#">Press</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12">
+          <ul class="social-media-links">
+            <li>
+              <a href="https://twitter.com/?lang=en" target="_blank"><img
+                  src="../assets/images/social-icons/twitter.png" alt="twitter" /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank"><img src="../assets/images/social-icons/linkedin.png"
+                  alt="linkedin" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-section">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="footer-nav-secondary">
+            <ul>
               <li>
-                <a href="#">Founders</a>
+                <a href="#">Privacy Policy</a>
               </li>
               <li>
-                <a href="#">Beneficiaries</a>
-              </li>
-              <li>
-                <a href="#">Scholarships</a>
-              </li>
-              <li>
-                <a href="#">Press</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
+                <a href="#">Terms & Conditions</a>
               </li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-3 col-sm-12">
-            <ul class="social-media-links">
-              <li>
-                <a href="" target="_blank"
-                  ><img
-                    src="../assets/images/social-icons/twitter.png"
-                    alt="twitter"
-                /></a>
-              </li>
-              <li>
-                <a href="" target="_blank"
-                  ><img
-                    src="../assets/images/social-icons/linkedin.png"
-                    alt="twitter"
-                /></a>
-              </li>
-            </ul>
-          </div>
         </div>
-        
-       
-      </div>
-      <div class="copyright-section">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <div class="footer-nav-secondary">
-              <ul>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                  </li>
-                  <li>
-                  <a href="#">Terms & Conditions</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <p class="copy-right">
-              © 2021 Company Name. All rights reserved.</p>
-          </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <p class="copy-right">© 2021 Company Name. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-    <script src="../assets/js/main.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+
 </html>
