@@ -21,13 +21,126 @@ jQuery("li.has-child").hover(
     jQuery(".scrolled .overlay").removeClass("overlay-expanded");
   }
 );
+gsap.registerPlugin(ScrollTrigger);
 
 jQuery(document).ready(function ($) {
   ArticleSlider();
   GallerySlider();
   BlogSlider();
   FounderListSlider();
+
+  //Gsap Animations
+
+  gsap.from('.main-heading', {
+    opacity: 0,
+    x: -30,
+    ease: 'none',
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.main-heading'
+    }
+  });
+
+  gsap.from('.banner-image img', {
+    opacity: 0,
+    x: 50,
+    ease: 'none',
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.banner-image'
+    }
+  });
+  gsap.from(".blogs h5", {
+    scrollTrigger: {
+      trigger: ".blogs"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".blog h5", {
+    scrollTrigger: {
+      trigger: ".blog"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".blogs .blog-image-wrapper", {
+    scrollTrigger: {
+      trigger: ".blogs .blog-item-wrapper"
+    },
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".article .article-text-container", {
+    scrollTrigger: {
+      trigger: ".article"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".article .article-image img", {
+    scrollTrigger: {
+      trigger: ".article .article-text-container"
+    },
+    x: 50,
+    opacity: 0,
+    duration: 2
+  });
+
+  gsap.from(".article-slider h5", {
+    scrollTrigger: {
+      trigger: ".article-slider"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+
+  gsap.from(".article-slider .article-slider-item", {
+    scrollTrigger: {
+      trigger: ".article-slider"
+    },
+    opacity: 0,
+    duration: 2
+  });
+
+  gsap.from(".section-beige h5", {
+    scrollTrigger: {
+      trigger: ".section-beige"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".section-beige img", {
+    scrollTrigger: {
+      trigger: ".section-beige"
+    },
+    opacity: 0,
+    x: 50,
+    duration: 1
+  });
+  gsap.from(".gallery h5", {
+    scrollTrigger: {
+      trigger: ".gallery"
+    },
+    x: -50,
+    opacity: 0,
+    duration: 2
+  });
+  gsap.from(".gallery .gallery-image", {
+    scrollTrigger: {
+      trigger: ".gallery"
+    },
+    opacity: 0,
+    duration: 2
+  });
+
   // Article Slider
+
   function ArticleSlider() {
     jQuery(".article-slider .slider-wrapper").slick({
       infinite: true,
@@ -57,10 +170,11 @@ jQuery(document).ready(function ($) {
         },
       ],
     });
-    
+
   }
 
   // Gallery Slider
+
   function GallerySlider() {
     jQuery(".gallery .gallery-wrapper").slick({
       slidesToShow: 3,
@@ -72,9 +186,17 @@ jQuery(document).ready(function ($) {
       infinite: true,
       responsive: [
         {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 2,
+
+          },
+        },
+        {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
+
           },
         },
       ],
@@ -82,6 +204,7 @@ jQuery(document).ready(function ($) {
   }
 
   // Blog Slider
+
   function BlogSlider() {
     jQuery(".blog .blog-item-wrapper").slick({
       slidesToShow: 1,
@@ -89,10 +212,8 @@ jQuery(document).ready(function ($) {
       centerMode: false,
       arrows: false,
       dots: false,
-      speed: 300,
       infinite: true,
-      autoplaySpeed: 5000,
-      autoplay: false,
+
       responsive: [
         {
           breakpoint: 1100,
@@ -117,6 +238,7 @@ jQuery(document).ready(function ($) {
   }
 
   //FounderList Slider
+
   function FounderListSlider() {
     jQuery(".section-beige .image-wrapper .image-slider").slick({
       slidesToShow: 1,
@@ -126,7 +248,7 @@ jQuery(document).ready(function ($) {
       dots: false,
       speed: 300,
       infinite: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 1000,
       autoplay: false,
       asNavFor: ".slider-nav",
       responsive: [
@@ -151,89 +273,12 @@ jQuery(document).ready(function ($) {
 });
 
 //Hamburger Menu
+
 jQuery(".mobile-menu .burger").click(function () {
   jQuery(".primary-menu").toggleClass("active");
   jQuery(".mobile-menu .burger").toggleClass("expanded");
   jQuery("body").toggleClass("menu-expanded");
 });
-
-//Gsap Animations
-gsap.registerPlugin(ScrollTrigger);
-gsap.from('.main-heading', {
-  opacity: 0,
-   x:-30,
-  ease: 'none',
-  duration:1,
-  scrollTrigger: {
-    trigger: '.main-heading'
-  }
-});
-
-gsap.from('.banner-image img', {
-  opacity: 0,
-  x:50,
-  ease: 'none',
-  duration:1,
-  scrollTrigger: {
-    trigger: '.banner-image'
-  }
-});
-gsap.from(".blogs h5",{
-  scrollTrigger: {
-    trigger: ".blogs"
-  },
-  x:-50,
- opacity:0,
- duration:2
-});
-gsap.from(".blog-image-wrapper", {
-  scrollTrigger: {
-    trigger: ".blog-item-wrapper"
-  },
-opacity:0,
- duration:2
-});
-gsap.from(".article .article-text-container", {
-  scrollTrigger: {
-    trigger: ".article"
-  },
-  x:-50,
- opacity:0,
- duration:2
-});
-gsap.from(".article .article-image img",{
-  scrollTrigger: {
-    trigger: ".article .article-text-container"
-  },
-  x:50,
- opacity:0,
- duration:2
-});
-
-gsap.from(".article-slider h5", {
-  scrollTrigger: {
-    trigger: ".article-slider"
-  },
-  x:-50,
- opacity:0,
- duration:2
-});
-gsap.from(".article-slider .slider-img img", {
-  scrollTrigger: {
-    trigger: ".article-slider"
-  },
-opacity:0,
- duration:2
-});
-
-gsap.to(".section-beige", {
-  scrollTrigger: {
-    trigger: ".section-beige"
-  },
-opacity:0,
- duration:2
-});
-
 
 
 

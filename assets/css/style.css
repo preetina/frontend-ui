@@ -134,6 +134,9 @@ header .header-content-wrapper nav ul li.nav-item span {
 header .header-content-wrapper nav ul li.nav-item:hover span {
   color: #003a92;
 }
+header .header-content-wrapper nav ul li.has-child {
+  cursor: pointer;
+}
 header .header-content-wrapper nav ul li.has-child ul {
   font-family: "GalaxieCopernicus-Book";
   position: absolute;
@@ -335,10 +338,10 @@ header .sticky.header-expanded .header-content-wrapper {
   margin-bottom: 50px;
 }
 .article-slider .slider-wrapper .article-slider-item {
-  margin: 0 30px 0 0;
+  padding: 0 30px 0 0;
 }
 .article-slider .slider-wrapper .article-slider-item img {
-  height: 350px;
+  height: 360px;
   object-fit: cover;
   width: 100%;
 }
@@ -415,6 +418,11 @@ header .sticky.header-expanded .header-content-wrapper {
 
 .blogs {
   padding: 60px 120px;
+}
+@media screen and (min-device-width: 1100px) and (max-device-width: 1300px) {
+  .blogs {
+    padding: 100px 120px 50px;
+  }
 }
 .blogs h5 {
   position: absolute;
@@ -860,6 +868,12 @@ footer .footer-logo img {
     text-align: left;
   }
 }
+@media screen and (max-width: 1100px) {
+  .gallery h5 {
+    position: relative;
+    top: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   header {
     margin-left: 16px;
@@ -934,15 +948,14 @@ footer .footer-logo img {
     padding: 32px;
     margin-bottom: 64px;
   }
-  .gallery h5 {
-    position: relative;
-    top: 0;
-  }
   .gallery .gallery-item .gallery-image {
     padding: 16px;
   }
   .gallery .gallery-item .gallery-image .img-caption p {
     font-size: 12px;
+  }
+  .gallery .gallery-item:first-child {
+    transform: translateY(0);
   }
 
   footer {
@@ -1010,11 +1023,20 @@ footer .footer-logo img {
     content: url(../images/right-arrow.png);
     position: absolute;
     margin-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .section-beige .slick-slider,
 .section-beige .slick-list,
-.section-beige .slick-track {
+.section-beige .slick-track,
+.section-beige .slick-slide {
     width: 100% !important;
+  }
+  .section-beige .slick-slider .item,
+.section-beige .slick-list .item,
+.section-beige .slick-track .item,
+.section-beige .slick-slide .item {
+    position: relative;
   }
   .section-beige ul.slider-nav {
     display: none;
