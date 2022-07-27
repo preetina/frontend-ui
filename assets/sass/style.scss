@@ -134,7 +134,7 @@ h5.heading-white {
 
 .bg-white-wrapper {
   margin: 0 0 260px 60px;
-  height: 615px;
+  height: 605px;
 }
 
 header {
@@ -371,7 +371,7 @@ header .sticky.header-expanded {
   background-color: $maroon;
   height: 700px;
   padding: 80px 0;
-  margin-bottom: 342px;
+  margin-bottom: 325px;
   margin-right: 60px;
 
   .article-text-container {
@@ -451,13 +451,13 @@ header .sticky.header-expanded {
 
 .section-beige {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   background: #fff;
 
   .section-beige-wrapper {
     background: $beige;
     padding: 80px 60px;
-    height: 470px;
+    height: 400px;
   }
 
   h5 {
@@ -525,7 +525,7 @@ header .sticky.header-expanded {
 }
 
 .blogs {
-  padding: 60px 120px;
+  padding: 120px 120px 120px;
 
   @media screen and (min-device-width: 1100px) and (max-device-width: 1300px) {
     padding: 100px 120px 50px;
@@ -839,7 +839,7 @@ footer {
     content: "";
     width: 100%;
     height: 100vh;
-    background: #000000a6;
+    background: #74788acc;
     position: fixed;
     top: 0;
     left: 0;
@@ -943,7 +943,7 @@ footer {
 
     ul {
       padding: 0 32px;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 200px);
       overflow-y: auto;
 
       li.nav-item {
@@ -1072,6 +1072,7 @@ footer {
       p.copy-right {
         margin-top: 32px;
         text-align: left;
+        margin-left: 10px;
       }
     }
   }
@@ -1091,8 +1092,8 @@ footer {
   }
 
   .bg-white-wrapper {
-    margin: 0 0 260px 16px;
-    height: 380px;
+    margin: 0 0 130px 16px;
+    height: 460px;
 
     .banner {
       .banner-text-wrapper {
@@ -1110,6 +1111,17 @@ footer {
 
           a {
             font-size: 14px;
+            width: 140px;
+
+            span.btn-text {
+              height: 40px;
+              width: 70%;
+            }
+
+            span.btn-img {
+              height: 40px;
+              width: 30%;
+            }
           }
         }
       }
@@ -1179,7 +1191,7 @@ footer {
 
   .gallery {
     padding: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 
     .gallery-item {
       .gallery-image {
@@ -1207,7 +1219,7 @@ footer {
         flex-direction: column-reverse;
 
         .social-media-links {
-          top: -95px;
+          top: -100px;
           right: 16px;
           position: absolute;
         }
@@ -1242,7 +1254,7 @@ footer {
 
 @media screen and(max-width:480px) {
   .section-beige {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 
     h5 {
       padding: 0;
@@ -1275,6 +1287,7 @@ footer {
         position: absolute;
         bottom: 20px;
         left: 30px;
+        font-family: 'GalaxieCopernicus-Book';
 
         &:after {
           content: url(../images/right-arrow.png);

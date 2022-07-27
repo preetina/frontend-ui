@@ -99,7 +99,7 @@ h5.heading-white {
 
 .bg-white-wrapper {
   margin: 0 0 260px 60px;
-  height: 615px;
+  height: 605px;
 }
 
 header {
@@ -296,7 +296,7 @@ header .sticky.header-expanded .header-content-wrapper {
   background-color: #8c2531;
   height: 700px;
   padding: 80px 0;
-  margin-bottom: 342px;
+  margin-bottom: 325px;
   margin-right: 60px;
 }
 .article .article-text-container {
@@ -357,13 +357,13 @@ header .sticky.header-expanded .header-content-wrapper {
 
 .section-beige {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   background: #fff;
 }
 .section-beige .section-beige-wrapper {
   background: #d7c3ae;
   padding: 80px 60px;
-  height: 470px;
+  height: 400px;
 }
 .section-beige h5 {
   padding: 0 60px;
@@ -417,7 +417,7 @@ header .sticky.header-expanded .header-content-wrapper {
 }
 
 .blogs {
-  padding: 60px 120px;
+  padding: 120px 120px 120px;
 }
 @media screen and (min-device-width: 1100px) and (max-device-width: 1300px) {
   .blogs {
@@ -676,7 +676,7 @@ footer .footer-logo img {
   content: "";
   width: 100%;
   height: 100vh;
-  background: #000000a6;
+  background: #74788acc;
   position: fixed;
   top: 0;
   left: 0;
@@ -753,7 +753,7 @@ footer .footer-logo img {
   }
   .primary-menu.active ul {
     padding: 0 32px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     overflow-y: auto;
   }
   .primary-menu.active ul li.nav-item {
@@ -866,6 +866,7 @@ footer .footer-logo img {
   footer .copyright-section p.copy-right {
     margin-top: 32px;
     text-align: left;
+    margin-left: 10px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -880,8 +881,8 @@ footer .footer-logo img {
   }
 
   .bg-white-wrapper {
-    margin: 0 0 260px 16px;
-    height: 380px;
+    margin: 0 0 130px 16px;
+    height: 460px;
   }
   .bg-white-wrapper .banner .banner-text-wrapper {
     padding: 60px 16px 40px;
@@ -897,6 +898,15 @@ footer .footer-logo img {
   }
   .bg-white-wrapper .banner .banner-text-wrapper .read-more a {
     font-size: 14px;
+    width: 140px;
+  }
+  .bg-white-wrapper .banner .banner-text-wrapper .read-more a span.btn-text {
+    height: 40px;
+    width: 70%;
+  }
+  .bg-white-wrapper .banner .banner-text-wrapper .read-more a span.btn-img {
+    height: 40px;
+    width: 30%;
   }
   .bg-white-wrapper .banner .banner-image img {
     width: calc(100% - 16px);
@@ -946,7 +956,7 @@ footer .footer-logo img {
 
   .gallery {
     padding: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
   .gallery .gallery-item .gallery-image {
     padding: 16px;
@@ -965,7 +975,7 @@ footer .footer-logo img {
     flex-direction: column-reverse;
   }
   footer .footer-nav-primary .row .social-media-links {
-    top: -95px;
+    top: -100px;
     right: 16px;
     position: absolute;
   }
@@ -989,7 +999,7 @@ footer .footer-logo img {
 }
 @media screen and (max-width: 480px) {
   .section-beige {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
   .section-beige h5 {
     padding: 0;
@@ -1018,6 +1028,7 @@ footer .footer-logo img {
     position: absolute;
     bottom: 20px;
     left: 30px;
+    font-family: "GalaxieCopernicus-Book";
   }
   .section-beige .image-wrapper .image-caption.hidden-desktop:after {
     content: url(../images/right-arrow.png);
